@@ -1,4 +1,4 @@
-﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    Daniel Reyes Sunga Portfolio â€” Enhanced Design
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
@@ -445,7 +445,24 @@ h3 {
 .company {
   display: flex; align-items: center; gap: 5px;
   color: var(--teal); font-weight: 600; font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+.company-link {
+  display: inline-flex;
+  width: fit-content;
   margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(240, 192, 96, 0.42);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.company-link:hover,
+.company-link:focus-visible {
+  color: var(--teal);
+  border-color: rgba(62, 207, 202, 0.6);
 }
 .timeline-item ul { list-style: none; display: grid; gap: 8px; }
 .timeline-item li {
