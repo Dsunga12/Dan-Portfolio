@@ -887,3 +887,106 @@ h3 {
     padding: 22px 14px 0;
   }
 }
+
+/* Ariane-style hero positioning, keeping Daniel's dark color theme */
+.site-header {
+  width: min(1160px, calc(100% - 32px));
+  min-height: 66px;
+  margin-top: 12px;
+  padding: 10px 20px;
+}
+
+.hero.section {
+  width: min(1160px, calc(100% - 32px));
+  min-height: calc(100svh - 80px);
+  padding-top: 50px;
+}
+
+.hero {
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.hero-content .eyebrow-wrap {
+  margin-bottom: 14px;
+}
+
+h1 {
+  max-width: 560px;
+  font-size: clamp(2.65rem, 5.8vw, 5rem);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero-copy {
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+.profile-panel {
+  justify-self: center;
+  width: min(100%, 430px);
+  transform: translateX(18px);
+}
+
+.profile-frame {
+  padding: 18px 10px 0;
+}
+
+.profile-frame img {
+  width: 128%;
+  height: 128%;
+  object-position: center bottom;
+}
+
+.profile-badge {
+  right: -18px;
+  left: auto;
+  bottom: 34px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 44px;
+    gap: 36px;
+  }
+
+  .profile-panel {
+    order: -1;
+    justify-self: center;
+    width: min(330px, 72vw);
+    transform: none;
+  }
+
+  .profile-badge {
+    left: 0;
+    right: auto;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    width: calc(100% - 22px);
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 11vw, 3.75rem);
+  }
+
+  .profile-panel {
+    width: min(300px, 76vw);
+  }
+
+  .profile-badge {
+    position: static;
+    margin-top: 14px;
+  }
+}
