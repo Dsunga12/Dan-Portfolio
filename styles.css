@@ -826,7 +826,7 @@ h3 {
 
 /* Circular hero portrait */
 .profile-panel {
-  width: min(100%, 460px);
+  width: min(100%, 390px);
 }
 
 .profile-glow {
@@ -841,7 +841,7 @@ h3 {
   display: flex;
   align-items: end;
   justify-content: center;
-  padding: 18px 10px 0;
+  padding: 26px 18px 0;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.18), transparent 22%),
@@ -854,11 +854,11 @@ h3 {
 }
 
 .profile-frame img {
-  width: 134%;
-  height: 134%;
+  width: 116%;
+  height: 116%;
   max-width: none;
   object-fit: contain;
-  object-position: center 100%;
+  object-position: center bottom;
   padding-top: 0;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.42));
 }
@@ -874,16 +874,16 @@ h3 {
 
 @media (max-width: 900px) {
   .profile-panel {
-    width: min(100%, 410px);
+    width: min(100%, 350px);
   }
 }
 
 @media (max-width: 600px) {
   .profile-panel {
-    width: min(100%, 330px);
+    width: min(100%, 300px);
   }
 
   .profile-frame {
-    padding: 16px 8px 0;
+    padding: 22px 14px 0;
   }
 }
