@@ -5,34 +5,34 @@
 /* ── Tokens ── */
 :root {
   /* Dark blue backgrounds */
-  --bg:         #060c18;
-  --bg-2:       #091022;
-  --panel:      #0d1630;
-  --panel-2:    #111d3a;
-  --panel-3:    #152042;
+  --bg:         #101619;
+  --bg-2:       #141c20;
+  --panel:      #172126;
+  --panel-2:    #1d292e;
+  --panel-3:    #263338;
 
   /* Text */
-  --ink:        #e8eeff;
-  --ink-2:      #c5d0f0;
-  --muted:      #8a9bc8;
-  --subtle:     #4a5a88;
-  --line:       rgba(100,140,255,0.12);
-  --line-2:     rgba(100,140,255,0.22);
+  --ink:        #f0f5f3;
+  --ink-2:      #d0ddd8;
+  --muted:      #9baaa5;
+  --subtle:     #64736e;
+  --line:       rgba(122,229,208,0.13);
+  --line-2:     rgba(122,229,208,0.24);
 
   /* Blue accent palette */
-  --blue:       #4f8ef7;
-  --blue-bright:#6fa8ff;
-  --blue-dim:   rgba(79,142,247,0.13);
-  --blue-glow:  0 0 50px rgba(79,142,247,0.24);
+  --blue:       #36bda4;
+  --blue-bright:#7ae5d0;
+  --blue-dim:   rgba(54,189,164,0.13);
+  --blue-glow:  0 0 50px rgba(54,189,164,0.22);
 
-  --cyan:       #38d4e8;
-  --cyan-dim:   rgba(56,212,232,0.12);
+  --cyan:       #f2b662;
+  --cyan-dim:   rgba(242,182,98,0.12);
 
-  --violet:     #7c6cf0;
-  --violet-dim: rgba(124,108,240,0.13);
+  --violet:     #6f8fbd;
+  --violet-dim: rgba(111,143,189,0.13);
 
-  --steel:      #a8c0ff;
-  --steel-dim:  rgba(168,192,255,0.10);
+  --steel:      #bed1cb;
+  --steel-dim:  rgba(190,209,203,0.10);
 
   /* Shadows */
   --shadow-card: 0 24px 64px rgba(0,0,0,0.55);
@@ -55,11 +55,7 @@ body {
   line-height: 1.78;
   background: var(--bg);
   overflow-x: hidden;
-  background:
-    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(79,142,247,0.12) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 50% at 90% 30%, rgba(124,108,240,0.10) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(56,212,232,0.07) 0%, transparent 60%),
-    #060c18;
+  background: var(--bg);
 }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
@@ -71,8 +67,8 @@ body::before {
   content: "";
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image:
-    linear-gradient(rgba(79,142,247,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79,142,247,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(122,229,208,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122,229,208,0.035) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
 }
@@ -268,9 +264,7 @@ h3 {
 /* Profile panel */
 .profile-panel { position: relative; justify-self: center; width: min(100%, 420px); }
 .profile-glow {
-  position: absolute; inset: -30px; z-index: -1; border-radius: 50%;
-  background: radial-gradient(circle at 50% 40%, rgba(79,142,247,0.22), transparent 65%);
-  filter: blur(30px);
+  display: none;
 }
 .profile-frame {
   overflow: hidden; border-radius: 20px;
@@ -702,10 +696,7 @@ h3 {
   position: relative; overflow: hidden;
 }
 .contact-panel::before {
-  content: ""; position: absolute; top: -60px; right: -60px;
-  width: 320px; height: 320px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(79,142,247,0.14), transparent 65%);
-  pointer-events: none;
+  display: none;
 }
 .contact-panel h2 { margin-bottom: 16px; }
 .contact-sub { color: var(--muted); font-size: 0.98rem; line-height: 1.78; margin-bottom: 22px; }
@@ -830,10 +821,7 @@ h3 {
 }
 
 .profile-glow {
-  inset: -36px;
-  background:
-    radial-gradient(circle at 50% 48%, rgba(79, 142, 247, 0.28), transparent 56%),
-    radial-gradient(circle at 70% 25%, rgba(124, 108, 240, 0.18), transparent 42%);
+  display: none;
 }
 
 .profile-frame {
@@ -959,7 +947,7 @@ h1 {
   }
 
   .profile-panel {
-    order: -1;
+    order: 0;
     justify-self: center;
     width: min(330px, 72vw);
     transform: none;
